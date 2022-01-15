@@ -19,7 +19,7 @@ echo 'src-git small https://github.com/kenzok8/small' >>feeds.conf.default
 
 # fix yt8521
 rm -rf ./target/linux/rockchip/patches-5.4/600-net-phy-Add-driver-for-Motorcomm-YT85xx-PHYs.patch
-cp -f $GITHUB_WORKSPACE/scripts/600-net-phy-Add-driver-for-Motorcomm-YT85xx-PHYs.patch target/linux/rockchip/patches-5.4/600-net-phy-Add-driver-for-Motorcomm-YT85xx-PHYs.patch
+cp -f $GITHUB_WORKSPACE/patches/600-net-phy-Add-driver-for-Motorcomm-YT85xx-PHYs.patch target/linux/rockchip/patches-5.4/600-net-phy-Add-driver-for-Motorcomm-YT85xx-PHYs.patch
 
 # Add extra wireless drivers
 svn co https://github.com/immortalwrt/immortalwrt/branches/openwrt-18.06-k5.4/package/kernel/rtl8812au-ac
