@@ -33,3 +33,7 @@ svn co https://github.com/immortalwrt/immortalwrt/branches/openwrt-18.06-k5.4/pa
 pushd package/kernel/mt76
 sed -i '/mt7662u_rom_patch.bin/a\\techo mt76-usb disable_usb_sg=1 > $\(1\)\/etc\/modules.d\/mt76-usb' Makefile
 popd
+
+# 更新固件信息
+sed -i "s/by TSUIWAI /$(date +%Y.%m.%d) by TSUIWAI /g" package/lean/default-settings/files/zzz-default-settings
+sed -i "s/OpenWrt /$(date +%Y.%m.%d) by TSUIWAI /g" package/lean/default-settings/files/zzz-default-settings
