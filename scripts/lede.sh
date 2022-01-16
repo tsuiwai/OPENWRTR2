@@ -56,3 +56,10 @@ wget -P target/linux/rockchip/armv8/base-files/usr/bin/ https://github.com/frien
 wget -P target/linux/rockchip/armv8/base-files/etc/rc.d/ https://github.com/friendlyarm/friendlywrt/raw/master-v19.07.1/target/linux/rockchip-rk3328/base-files/etc/rc.d/S96fa-rk3328-pwmfan
 chmod 777 target/linux/rockchip/armv8/base-files/etc/init.d/fa-rk3328-pwmfan
 chmod 777 target/linux/rockchip/armv8/base-files/usr/bin/start-rk3328-pwm-fan.sh
+
+# Add luci-theme-argon
+git clone --depth=1 -b 18.06 https://github.com/jerrykuku/luci-theme-argon
+git clone --depth=1 https://github.com/jerrykuku/luci-app-argon-config
+rm -rf ../lean/luci-theme-argon
+rm -rf ./luci-theme-argon/htdocs/luci-static/argon/img/bg1.jpg
+cp -f $GITHUB_WORKSPACE/data/bg1.jpg luci-theme-argon/htdocs/luci-static/argon/img/bg1.jpg
