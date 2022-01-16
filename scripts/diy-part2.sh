@@ -12,3 +12,8 @@
 
 # Modify default IP
 sed -i 's/192.168.1.1/192.168.2.1/g' package/base-files/files/bin/config_generate
+
+# 更新固件信息
+sed -i "s/by TSUIWAI /$(date +%Y.%m.%d) by TSUIWAI /g" package/lean/default-settings/files/zzz-default-settings
+sed -i "s/OpenWrt /$(date +%Y.%m.%d) by TSUIWAI /g" package/lean/default-settings/files/zzz-default-settings
+
